@@ -26,8 +26,8 @@ function NewBlog() {
 
   return (
     <>
-      <div className='extra-tall min-h-screen flex justify-center items-center text-lg text-white'>
-        <div className='bg-gray-900 h-auto w-5/6 rounded-lg p-7 flex flex-col gap-2 border border-white'>
+      <div className='extra-tall min-h-screen h-auto flex justify-center items-center text-lg text-white'>
+        <div className='bg-gray-900 min-h-11/12  w-11/12 rounded-lg p-7 flex flex-col gap-2 border border-white'>
           {/* title, author, slug, content, isPublished */}
           <form action="" className='flex flex-col gap-10' onSubmit={handleSubmit}>
             <div className='flex gap-5 justify-center items-center'>
@@ -92,8 +92,8 @@ function NewBlog() {
               <textarea 
                 name="content" 
                 id="content" 
-                cols="100" 
-                rows="3" 
+                cols="200" 
+                rows="15" 
                 className='rounded p-2' 
                 placeholder='Enter the content of your blog here...'
                 onChange={handleChange}

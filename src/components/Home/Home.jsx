@@ -41,7 +41,7 @@ function Home() {
 
   return (
     <div className='h-auto'>
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 w-11/12">
         <h1 className="text-2xl font-bold mb-4">Latest Blogs</h1>
         <div className="">
           {blogs.length === 0 && (<div className="h-screen flex justify-center items-center">Loading...</div>)}
