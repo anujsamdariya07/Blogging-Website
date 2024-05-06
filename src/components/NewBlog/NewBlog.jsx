@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-function NewBlog() {
+function NewBlog({onFormSubmit}) {
   const [formData, setFormData] = useState({
     title: '',
     author: '',
@@ -18,11 +18,13 @@ function NewBlog() {
   const handleSubmit = (event) => {
     event.preventDefault()
     setFormData((prevFormData) => ({ ...prevFormData, isPublished: true }))
+    console.log(formData)
   }
   
   useEffect(() => {
     console.log(formData)
-  }, [formData.isPublished])
+    onFormSubmit(formData)
+  }, [formData])
 
   function createSlug(title) {
     return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
