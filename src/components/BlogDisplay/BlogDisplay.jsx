@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const BlogDisplay = ({ title, author, views, metaDesc, slug }) => {
     return (
-        <div className="bg-gray-900 shadow-lg rounded-lg p-6 mb-6">
+        <div className="bg-gray-900 shadow-lg rounded-lg p-6 mb-6 border-solid border-white border">
             <h2 className="text-xl font-semibold mb-2">{title}</h2>
             <p className="text-gray-600 mb-1">Author: {author}</p>
             <p className="text-gray-600 mb-4">Views: {views}</p>

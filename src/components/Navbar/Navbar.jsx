@@ -5,7 +5,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   return (
-    <nav className="navbar p-6 bg-gray-900">
+    <nav className="navbar p-6 bg-gray-900 border-white border-b">
       <div className="container flex justify-between">
         <Link to="/" className="navbar-brand" style={{fontFamily: 'fantasy'}}>WriteWise</Link>
         <div className="navbar-nav flex gap-5">
