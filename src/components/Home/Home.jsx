@@ -19,7 +19,7 @@ function Home() {
     );
   
     promise.then(function (response) {
-      console.log(response);
+      // console.log(response);
       setBlogs(response.documents)
     }, function (error) {
       console.log(error);

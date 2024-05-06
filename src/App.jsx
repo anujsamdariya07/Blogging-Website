@@ -115,11 +115,11 @@ function App() {
   const route = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<Layout />} >
-        <Route path='/' element={<Home />}  />
-        <Route path='/about' element={<About />}  />
-        <Route path='/contact' element={<Contact />}  />
-        <Route path='/blogs' element={<Blogs />}  />
-        <Route path='/newblog' element={<NewBlog />}  />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/blogs' element={<Blogs />} />
+        <Route path='/newblog' element={<NewBlog />} />
       </Route>
     )
   )

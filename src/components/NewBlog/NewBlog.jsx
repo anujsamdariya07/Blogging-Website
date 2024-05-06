@@ -1,24 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function NewBlog() {
   const [formData, setFormData] = useState({
     title: '',
     author: '',
     content: '',
+    slug: '',
     isPublished: false,
   })
 
   const handleChange = (event) => {
     event.preventDefault()
     const { name, value } = event.target
-    setFormData((prevFormData) => ({...prevFormData, [name]: value}))
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }))
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    setFormData((prevFormData) => ({...prevFormData, isPublished: true}))
-    console.log(formData)
+    setFormData((prevFormData) => ({ ...prevFormData, isPublished: true }))
   }
+  
+  useEffect(() => {
+    console.log(formData)
+  }, [formData.isPublished])
 
   function createSlug(title) {
     return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -71,7 +75,7 @@ function NewBlog() {
                 name='slug'
                 id='slug'
                 placeholder='Slug'
-                value={createSlug(formData.title)}
+                value={formData.slug=createSlug(formData.title)}
                 readOnly
               />
             </div>
@@ -79,26 +83,16 @@ function NewBlog() {
               <label htmlFor="content" className='w-20'>
                 Content:
               </label>
-              {/* <input
-                type="text"
-                className='p-1 text-white w-full'
-                required
-                name='content'
-                id='content'
-                placeholder='Enter the content of your blog here...'
-                value={createSlug(formData.content)}
-                onChange={handleChange}
-              /> */}
-              <textarea 
-                name="content" 
-                id="content" 
-                cols="200" 
-                rows="15" 
-                className='rounded p-2' 
+              <textarea
+                name="content"
+                id="content"
+                cols="200"
+                rows="15"
+                className='rounded p-2'
                 placeholder='Enter the content of your blog here...'
                 onChange={handleChange}
                 value={formData.content}
-                ></textarea>
+              ></textarea>
             </div>
             <div className='flex justify-center items-center'>
               <button className='bg-green-900 hover:border-white' type='submit'>
