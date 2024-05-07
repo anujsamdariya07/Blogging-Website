@@ -46,7 +46,7 @@ function Home() {
         <div className="">
           {blogs.length === 0 && (<div className="h-screen flex justify-center items-center">Loading...</div>)}
           {blogs.map((blog, index) => (
-            <BlogDisplay key={index} title={blog.title} author={blog.author} metaDesc={extractFirst100Chars(blog.content)} slug={blog.slug} views={blog.views}/>
+            <BlogDisplay key={index} title={blog.title} author={blog.author} metaDesc={extractFirst100Chars(blog.content)} slug={blog.slug} />
           ))}
         </div>
       </div>
