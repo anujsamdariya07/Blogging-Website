@@ -29,7 +29,7 @@ function App() {
       const databases = new Databases(client);
       const promise = databases.createDocument(
         '6639d672000bc7697ca7',
-        '6639d68200367ff98fe4',
+        '6639de2200249e8694b8',
         ID.unique(),
         globalFormData,
       );
@@ -55,7 +55,7 @@ function App() {
   
     let promise = databases.listDocuments(
       '6639d672000bc7697ca7',
-      '6639d68200367ff98fe4',
+      '6639de2200249e8694b8',
       []
     );
   

@@ -14,7 +14,7 @@ function Home() {
   
     let promise = databases.listDocuments(
       '6639d672000bc7697ca7',
-      '6639d68200367ff98fe4',
+      '6639de2200249e8694b8',
       []
     );
   
