@@ -8,7 +8,7 @@ const Footer = () => {
         <Link to="/" className="hover:text-gray-400 transition duration-300">Home</Link>
         <Link to="/about" className="hover:text-gray-400 transition duration-300">About</Link>
         <Link to="/contact" className="hover:text-gray-400 transition duration-300">Contact Us</Link>
-        <Link to="/blogs" className="hover:text-gray-400 transition duration-300">Blogs</Link>
+        
       </div>
     </footer>
   );
