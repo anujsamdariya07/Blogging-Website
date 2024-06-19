@@ -8,13 +8,13 @@ function Home() {
   useEffect(() => { 
     const client = new Client()
       .setEndpoint("https://cloud.appwrite.io/v1")
-      .setProject("662335b6786db603f545")
+      .setProject("662335cc12f41d0034f2")
   
     const databases = new Databases(client);
   
     let promise = databases.listDocuments(
-      '6639d672000bc7697ca7',
-      '6639de2200249e8694b8',
+      '66233b13b996516b9454',
+      '66233b2083514e21bafd',
       []
     );
   
